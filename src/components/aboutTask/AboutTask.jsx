@@ -1,10 +1,10 @@
 // import { useEffect, useState } from "react"
 import "./aboutTask.css"
 import { FaRegEdit } from "react-icons/fa"
-import { BsBookmarkCheck } from "react-icons/Bs"
-import { CiCircleRemove } from "react-icons/Ci"
+import { BsBookmarkCheck } from "react-icons/bs"
+import { CiCircleRemove } from "react-icons/ci"
 import { useState } from "react"
-import { FiSave } from "react-icons/Fi"
+import { FiSave } from "react-icons/fi"
 function AboutTask(props) {
 
     const [task, setTask] = useState(true)

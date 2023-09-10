@@ -1,9 +1,9 @@
 import { useState } from "react"
 import AboutTask from "../aboutTask/AboutTask"
 import "./addTask.css"
-import { GrAddCircle } from "react-icons/Gr"
-import { BsBookmarkCheck } from "react-icons/Bs"
-import { MdPendingActions } from "react-icons/Md"
+import { GrAddCircle } from "react-icons/gr"
+import { BsBookmarkCheck } from "react-icons/bs"
+import { MdPendingActions } from "react-icons/md"
 
 function AddTask() {
     const [inputValue, setInputValue] = useState("")
