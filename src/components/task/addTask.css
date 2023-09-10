@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.add-task-main-div{
+    width: 22rem;
+    background-color: rgb(145, 145, 182);
+    /* background-color: #fff; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 1rem 0;
+    border-radius: 6px;
+    padding-bottom: 1rem;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    margin-top: 1rem;
+    text-decoration: underline;
+}
+#inputTag{
+    border-radius: 6px;
+    height: 2rem;
+    width: 12rem;
+    background-color: rgb(251, 240, 240);
+    border: none;
+    text-align: center;
+}
+#inputTag:focus{
+    outline: none;
+}
+#add-icon{
+    font-size: 1.8rem;
+}
+#add-icon:hover{
+    border-radius: 50% ;
+    background-color: #419e0b;
+    cursor: pointer;
+    color: #590f0f;
+}
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 6px;
+    margin-top: 1rem;
+}
+footer{
+    margin-top: 60vh;
+}
+.calculating-complete-task .box, .calculating-pending-task .box{
+    height: 1.2rem;
+    width: 1.2rem;
+    padding: 2px;
+    border: 1px solid rgb(22, 22, 22);
+    position: relative;
+    top: 10px;
+    right: 8px;
+    z-index: 1;
+    background-color: rgb(32, 81, 226);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(253, 245, 245);
+}
+.bookmark, .pending{
+    font-size: 2rem;
+}
+.calculating-complete-task{
+    position: relative;
+    left: 1rem;
+}
+.calculating-pending-task{
+    position: relative;
+    left: 0.5rem;
+}
+/* .task-calculating{
+    display: flex;
+} */
+
+@media  screen and (max-width:500px) {
+    body{
+        background-color: rgb(56, 97, 220);
+    }
+    .add-task-main-div{
+        margin: 0;
+    }
+}
+@media  screen and (max-width:400px) {
+    body{
+        background-color: rgb(145, 145, 182);
+    }
+}

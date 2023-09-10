@@ -1,0 +1,48 @@
+.task{
+   margin: 1.5rem 0;
+}
+li{
+    list-style: none;
+}
+.list-item, .input-item{
+    border: 1px solid rgb(112, 105, 105);
+    border-radius: 5px;
+    width: 18rem;
+
+    padding: 5px;
+    margin: 5px 0px;
+    background-color: rgb(205, 202, 202);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.edit-task, .mark-complete{
+    font-size: 1.4rem;
+}
+.edit-task:hover, .mark-complete:hover{
+    cursor: pointer;
+    color: #fff;
+}
+.delete-icon{
+    font-size: 1.4rem;
+}
+.delete-icon:hover{
+    border-radius: 50% ;
+    background-color: #c41e1e;
+    cursor: pointer;
+    color: #fff;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    padding-left: 1rem;
+}
+.input-item input{
+    border-radius: 6px;
+    border: 1px solid rgb(101, 95, 95);
+}
+.input-item input:focus{
+    outline: none;
+}
