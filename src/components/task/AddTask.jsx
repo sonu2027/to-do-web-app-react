@@ -53,10 +53,6 @@ function AddTask() {
         })
         setTaskComplete(taskComplete + 1)
         setTaskPending(taskPending-1)
-        console.log("task", task.length);
-        if(task.length==1){
-            setAppearButton(false)
-        }
     }
     function manageTask() {
         addTask([])
