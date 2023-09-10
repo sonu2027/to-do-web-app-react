@@ -19,9 +19,13 @@ li{
 .edit-task, .mark-complete{
     font-size: 1.4rem;
 }
-.edit-task:hover, .mark-complete:hover{
+.edit-task:hover{
     cursor: pointer;
-    color: #fff;
+    color: rgb(169, 169, 52);
+}
+.mark-complete:hover{
+    cursor: pointer;
+    color: rgb(4, 128, 4);
 }
 .delete-icon{
     font-size: 1.4rem;
@@ -45,4 +49,7 @@ li{
 }
 .input-item input:focus{
     outline: none;
+}
+body{
+    font-family: sans-serif;
 }

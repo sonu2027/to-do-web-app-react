@@ -34,24 +34,6 @@ function AboutTask(props) {
                     </div>
                 </div>)}
 
-
-
-                {/* <div className="input-item">
-                    <li>{props.task}</li>
-                    <div className="button">
-                        <CiCircleRemove className="delete-icon" id={props.id} onClick={() => { props.onSelect(props.id) }} />
-                        <FaRegEdit className="operation" />
-                        <BsBookmarkCheck className="mark-complete" id={props.id} onClick={() => { props.onMark(props.id) }} />
-                    </div>
-                </div> */}
-                {/* <div className="list-item">
-                    <li>{props.task}</li>
-                    <div className="button">
-                        <CiCircleRemove className="delete-icon" id={props.id} onClick={() => { props.onSelect(props.id) }} />
-                        <FaRegEdit className="edit-task" />
-                        <BsBookmarkCheck className="mark-complete" id={props.id} onClick={() => { props.onMark(props.id) }} />
-                    </div>
-                </div> */}
             </div>
         </>
     )
