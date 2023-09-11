@@ -38,8 +38,11 @@ function AddTask() {
             })
         })
         setTaskPending(taskPending-1)
-        console.log("task", task.length);
-        if(task.length==1){
+        console.log("taskPending", taskPending);
+        console.log("taskCompleet", taskComplete);
+        
+        if(taskPending==1 && taskComplete==0){
+            console.log("apearing")
             setAppearButton(false)
         }
     }

@@ -38,10 +38,7 @@ h1{
     font-size: 1.8rem;
 }
 #add-icon:hover{
-    border-radius: 50% ;
-    background-color: #419e0b;
     cursor: pointer;
-    color: #590f0f;
 }
 .input{
     display: flex;
