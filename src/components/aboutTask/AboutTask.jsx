@@ -26,7 +26,7 @@ function AboutTask(props) {
                     task == true ?
                         (<div className="list-item">
                             {console.log("input-val",inputVal)}
-                            <li>{props.task}</li>
+                            <li>{inputVal}</li>
                             <div className="button">
                                 <CiCircleRemove className="delete-icon" id={props.id} onClick={() => { props.onSelect(props.id) }} />
                                 <FaRegEdit onClick={() => setTask(false)} className="edit-task" />
