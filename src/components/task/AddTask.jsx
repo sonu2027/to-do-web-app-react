@@ -1,11 +1,9 @@
 import { useState } from "react"
 import AboutTask from "../aboutTask/AboutTask"
 import "./addTask.css"
-import { GrAddCircle } from "react-icons/gr"
-// import { BsBookmarkCheck } from "react-icons/bs"
 import PendingTask from "../pendingTask/PendingTask.jsx"
 import CompleteTask from "../completeTask/CompleteTask"
-// import { MdPendingActions } from "react-icons/md"
+import Input from "../input/Input"
 
 function AddTask() {
     const [inputValue, setInputValue] = useState("")
@@ -13,6 +11,9 @@ function AddTask() {
     const [taskComplete, setTaskComplete] = useState(0)
     const [taskPending, setTaskPending] = useState(0)
     const [appearButton, setAppearButton] = useState(false)
+    const [completeTaskList, setCompleteTaskList] = useState([])
+    // const [taskAdded, setTaskAdded]=useState(false)
+    // const [markTask, setMarkTask]=useState(fasle)
 
     function handleInputValue(e) {
         setInputValue(e.target.value)
@@ -25,6 +26,7 @@ function AddTask() {
             setInputValue("")
             setTaskPending(taskPending + 1)
             setAppearButton(true)
+            // setTaskAdded(true)
         }
         else {
             alert("Please, write some task to add")
@@ -37,11 +39,11 @@ function AddTask() {
                 return i != id
             })
         })
-        setTaskPending(taskPending-1)
+        setTaskPending(taskPending - 1)
         console.log("taskPending", taskPending);
         console.log("taskCompleet", taskComplete);
-        
-        if(taskPending==1 && taskComplete==0){
+
+        if (taskPending == 1 && taskComplete == 0) {
             console.log("apearing")
             setAppearButton(false)
         }
@@ -49,14 +51,22 @@ function AddTask() {
 
     function markComplete(id) {
         console.log("Delete");
+        console.log("id for delete is", id);
+        let el = ""
         addTask((state) => {
             return state.filter((e, i) => {
+                if (i == id) {
+                    el = e
+                }
                 return i != id
             })
         })
+        console.log("reaining task is:", task);
+        setCompleteTaskList((s) => [...s, el])
         setTaskComplete(taskComplete + 1)
-        setTaskPending(taskPending-1)
+        setTaskPending(taskPending - 1)
     }
+    console.log("reaining task is:", task);
     function manageTask() {
         addTask([])
         setAppearButton(false)
@@ -66,23 +76,22 @@ function AddTask() {
     return (
         <div className="add-task-main-div">
             <div className="input">
-                <div className="input-div">
-                    <input id="inputTag" type="text" placeholder="Enter your task" onChange={handleInputValue} value={inputValue} />
-
-                    <GrAddCircle id="add-icon" onClick={handleTask} /><br />
-                </div>
+                <Input change={handleInputValue} val={inputValue} click={handleTask} /><br />
 
                 <div className="task-status">
-                <PendingTask num={taskPending} />
-                <CompleteTask num={taskComplete} />
+                    <PendingTask num={taskPending} />
+                    <CompleteTask num={taskComplete} />
                 </div>
             </div><br />
 
             <h1>To do</h1>
             {inputValue}
 
-
+            {console.log("reaining task is:", task)}
             {task.map((e, i) =>
+            <AboutTask onMark={markComplete} onSelect={deleteItem} key={i} task={e} id={i} />)}
+            <h1>Completed</h1>
+            {completeTaskList.map((e, i) =>
                 <AboutTask onMark={markComplete} onSelect={deleteItem} key={i} task={e} id={i} />
             )}
             {appearButton == true ? (
